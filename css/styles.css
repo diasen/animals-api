@@ -1,0 +1,39 @@
+.fas {
+  color: red;
+}
+
+.card-fav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+h1 {
+  margin: 50px 0;
+}
+
+.inputField {
+  margin-bottom: 50px;
+}
+
+input {
+  width: 60%;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.clearBtn {
+  height: 40px;
+  width: 200px;
+  border: none;
+  padding: 0 18px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 50px 0;
+}
+/*# sourceMappingURL=styles.css.map */

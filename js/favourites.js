@@ -10,17 +10,17 @@ if (favourites.length === 0) {
   clearLocalStorage.style.display = 'none';
 }
 
-favourites.forEach(({ id, title, summary, author }) => {
+favourites.forEach(({ id, name, age, color, type }) => {
   favouriteCards.innerHTML += `
   <div class="card" style="width: 18rem;">
   <div class="card-body">
     <div class="card-fav">
-      <h5 class="card-title">${title}</h5>
-      <i class="fas fa-heart" data-id="${id}" data-author="${author}" data-title="${title}" data-summary="${summary}"></i>
+      <h5 class="card-title">${name}</h5>
+      <i class="far fa-heart" data-id="${id}" data-name="${name}" data-age="${age}" data-color="${color}" data-type="${type}"></i>
     </div>  
-        <h6 class="card-subtitle mb-2 text-muted">${author}</h6>
-        <p class="card-text">${summary}</p>
-        <a href="#" class="card-link">Read more</a>
+        <h6 class="card-subtitle mb-2 text-muted"> Type:${type}</h6>
+        <p class="card-text"> Color:${color}</p>
+        <p class="card-text"> Age:${age}</p>
   </div>
 </div>
 `;

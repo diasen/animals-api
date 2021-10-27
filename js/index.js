@@ -12,17 +12,17 @@ async function getArticles() {
 
   let cards = document.querySelector('.articleCards');
 
-  articlesData.forEach(({ id, title, summary, author }) => {
+  articlesData.forEach(({ id, name, age, color, type }) => {
     cards.innerHTML += `
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                   <div class="card-fav">
-                    <h5 class="card-title">${title}</h5>
-                    <i class="far fa-heart" data-id="${id}" data-author="${author}" data-title="${title}" data-summary="${summary}"></i>
+                    <h5 class="card-title">${name}</h5>
+                    <i class="far fa-heart" data-id="${id}" data-name="${name}" data-age="${age}" data-color="${color}" data-type="${type}"></i>
                   </div>  
-                      <h6 class="card-subtitle mb-2 text-muted">${author}</h6>
-                      <p class="card-text">${summary}</p>
-                      <a href="#" class="card-link">Read more</a>
+                      <h6 class="card-subtitle mb-2 text-muted"> Type:${type}</h6>
+                      <p class="card-text"> Color:${color}</p>
+                      <p class="card-text"> Age:${age}</p>
                 </div>
             </div>
 `;
@@ -70,17 +70,17 @@ async function getArticles() {
 
     let filteredArray = filteringAnArray(articlesData, search.value);
 
-    filteredArray.forEach(({ id, title, summary, author }) => {
+    filteredArray.forEach(({ id, name, age, color, type }) => {
       cards.innerHTML += `
       <div class="card" style="width: 18rem;">
       <div class="card-body">
         <div class="card-fav">
-          <h5 class="card-title">${title}</h5>
-          <i class="far fa-heart" data-id="${id}" data-author="${author}" data-title="${title}" data-summary="${summary}"></i>
+          <h5 class="card-title">${name}</h5>
+          <i class="far fa-heart" data-id="${id}" data-name="${name}" data-age="${age}" data-color="${color}" data-type="${type}"></i>
         </div>  
-            <h6 class="card-subtitle mb-2 text-muted">${author}</h6>
-            <p class="card-text">${summary}</p>
-            <a href="#" class="card-link">Read more</a>
+            <h6 class="card-subtitle mb-2 text-muted"> Type:${type}</h6>
+            <p class="card-text"> Color:${color}</p>
+            <p class="card-text"> Age:${age}</p>
       </div>
   </div>
     `;
